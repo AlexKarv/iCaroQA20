@@ -30,20 +30,20 @@ public class LoginTests {
         // fill input password
         // click yalla button
         // validate by text in the element
-        WebElement btnLogin = driver.findElement(By.xpath(""));
+        WebElement btnLogin = driver.findElement(By.xpath("//a[contains(@href, '/login')]"));
         btnLogin.click();
 
-        WebElement inputEmail = driver.findElement(By.xpath(""));
+        WebElement inputEmail = driver.findElement(By.xpath("//input[@id='email']"));
         inputEmail.click();
         inputEmail.clear();
-        inputEmail.sendKeys("");
+        inputEmail.sendKeys("alex.testengineer@gmail.com");
 
-        WebElement inputPassword = driver.findElement(By.xpath(""));
+        WebElement inputPassword = driver.findElement(By.xpath("//input[@id='password']"));
         inputPassword.click();
         inputPassword.clear();
-        inputPassword.sendKeys("");
+        inputPassword.sendKeys("Qwerty-888@");
 
-        WebElement btnYalla = driver.findElement(By.xpath(""));
+        WebElement btnYalla = driver.findElement(By.xpath("//button[@type='submit']"));
         btnYalla.click();
 
         WebElement textMessagePopUpH2 = driver.findElement(By.xpath(""));
