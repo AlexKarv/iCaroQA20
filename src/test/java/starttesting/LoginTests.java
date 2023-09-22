@@ -46,11 +46,15 @@ public class LoginTests {
         WebElement btnYalla = driver.findElement(By.xpath("//button[@type='submit']"));
         btnYalla.click();
 
-        WebElement textMessagePopUpH2 = driver.findElement(By.xpath(""));
+        WebElement textMessagePopUpH2 = driver.findElement(By.xpath("//h2[@class='message']"));
         String textMessageH2 = textMessagePopUpH2.getText().trim().toUpperCase();
         String expecteResult = "Logged in success".toUpperCase();
 
+        System.out.println(textMessageH2);
+
         Assert.assertEquals(textMessageH2, expecteResult);
+
+        driver.findElement(By.xpath("//button[@type='submit']"));
 
 
     }
